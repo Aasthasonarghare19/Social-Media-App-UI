@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SocialApp Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+<div class="relative flex w-full min-h-screen">
+<!-- Left Sidebar -->
+<aside class="sticky top-0 h-screen w-64 flex-shrink-0 p-4 hidden lg:flex flex-col">
+<div class="flex h-full flex-col justify-between rounded-lg bg-white dark:bg-[#1C1F27] p-4">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3 px-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="SocialApp logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdzEHc8AbhfqJ04A14-P5P442XOaGWGHhO7sBx9WhNCXeI_zuc0q9O5iTBfv9qy71QY4UGefTVUZOLnNwIaUSxSwCDJXJXxV9dCLmZrWL2IwNGdW05xG21MWKzxEWogdAFpFFuLTuSL_eB0V-IKb4P0M66O3cVEiDWZZWu0bVdums_rln8-2yIbBHoN85zcSrEyv50aFnKLMblFvFSGXnHhKN0dLHDRlGR9nOWZYMwJuOctSEkTCQgp_XEtaj2dlEUvGds06rYU5B8");'></div>
+<h1 class="text-slate-900 dark:text-white text-lg font-bold">SocialApp</h1>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-full bg-primary/10 dark:bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<p class="text-sm font-bold">Home</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined text-2xl text-slate-500 dark:text-slate-400">explore</span>
+<p class="text-sm font-medium text-slate-700 dark:text-slate-300">Explore</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined text-2xl text-slate-500 dark:text-slate-400">notifications</span>
+<p class="text-sm font-medium text-slate-700 dark:text-slate-300">Notifications</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined text-2xl text-slate-500 dark:text-slate-400">mail</span>
+<p class="text-sm font-medium text-slate-700 dark:text-slate-300">Messages</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined text-2xl text-slate-500 dark:text-slate-400">person</span>
+<p class="text-sm font-medium text-slate-700 dark:text-slate-300">Profile</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">New Post</span>
+</button>
+<div class="flex items-center gap-3 px-3 py-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer">
+<span class="material-symbols-outlined text-2xl text-slate-500 dark:text-slate-400">settings</span>
+<p class="text-sm font-medium text-slate-700 dark:text-slate-300">Settings</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 max-w-2xl mx-auto py-5">
+<div class="flex flex-col gap-4">
+<!-- Composer -->
+<div class="px-4">
+<div class="flex items-start gap-4 p-4 rounded-lg bg-white dark:bg-[#1C1F27] border border-slate-200 dark:border-slate-800">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shrink-0" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDtmfwZf_Gk55vNmPTHBTTi6mwlpL2XsUDIGi627E3BnCGtnoYJ5r751-IHX27jgkpDvpLFoRlm5TURB_jT-FLz6Cr_gMpQujndsA4ZEiwqa3D9CpWpwvn3b3PUtpmJiT_jUNIl407aIoIF_liIGY9ULEDMjlWMEaW2WwhRti267yxISsECOW5JoK3zLFKzCa-33SW-Y6ukByzupJubwpPfz5VMjd8L693ptRRDqBoTgvGiBO-ye2lDXOSPSXXSWXVI8I5Ijg-i-MQA");'></div>
+<div class="flex-1">
+<textarea class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden bg-transparent focus:outline-0 focus:ring-0 border-0 p-0 placeholder:text-slate-500 dark:placeholder:text-slate-400 text-lg" placeholder="What's on your mind?" rows="2"></textarea>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center gap-1">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">image</span>
+</button>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">gif_box</span>
+</button>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">poll</span>
+</button>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-xl">sentiment_satisfied</span>
+</button>
+</div>
+<button class="min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 px-5 bg-primary text-white text-sm font-bold leading-normal hover:bg-primary/90 transition-colors">
+<span class="truncate">Post</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Feed Separator -->
+<div class="w-full h-px bg-slate-200 dark:bg-slate-800 my-2"></div>
+<!-- Card 1 -->
+<div class="px-4">
+<div class="flex flex-col rounded-lg bg-white dark:bg-[#1C1F27] border border-slate-200 dark:border-slate-800">
+<div class="p-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Jane Doe avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCu9C9ZNukWGhg0It65y4iU8xmdSRD5UnUIvBzQoubKpgz9D3nva4FEdmfunY42T6ZTXaZer3p6fAjLTChWdsKlyObDX7nzC6Uh2pypYpquysZYDTht8tH_M7mno2cUz0Ynz8abXnqVcn5YNY_MvDQSCI9NMDi54HTT7cxCsqtqDb4tcOXgOdNMEsJv_n968Rv9hHqxw0hmrlhJvO0vaJD0jWVXPtC6U9yoSKFw7esj_aBAutgTeY93pNSIXfozmh8tOnmBOefs-mNM");'></div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight">Jane Doe</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">@janedoe_official · 2 hours ago</p>
+</div>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-xl text-slate-500 dark:text-slate-400">more_horiz</span>
+</button>
+</div>
+<p class="mt-3 text-slate-700 dark:text-slate-300 text-base font-normal leading-relaxed">Exploring the beautiful cityscapes today! So much history and art to see. #travel #art</p>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="A beautiful cityscape with historical architecture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSvpkbIuIojt-fIeCO0v8W8XyIkN-Bl1eU-cwZNkTJPiubiSkmRFN3wjsn6rYMqjRWcXmITJmSFX4mlU5A-gj9zIUrd5gZOBg2ZWj7mmpBSpU5TOh65r2qSxFeMItQc146taW7BTuuIBS2J8vKWvx6QGgoj8D4-jFCrix_n2S7HFp0RSfR-4M5TZMXEIwJ4O1UGsk55IX4lrjcm4Bk1AzGSUNec-_OM5QB-83a49xB_-W9KMGZLJ1tYtAxmJZ7Vf5fEXzAmysGtLEF");'></div>
+<div class="flex items-center justify-around py-1">
+<div class="flex items-center justify-center gap-2 px-3 py-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">1.2k</p>
+</div>
+<div class="flex items-center justify-center gap-2 px-3 py-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">88</p>
+</div>
+<div class="flex items-center justify-center gap-2 px-3 py-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-2xl">repeat</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">14</p>
+</div>
+<div class="flex items-center justify-center gap-2 px-3 py-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-2xl">ios_share</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="px-4">
+<div class="flex flex-col rounded-lg bg-white dark:bg-[#1C1F27] border border-slate-200 dark:border-slate-800">
+<div class="p-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="John Smith avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAiQEiMiA02i085a4qhN85_o88t4c6Q1Vqubro0T_CBq-z7wYILdnLr939hoiptjU7xJcSIk3QOT-U98CMjrt10d44LyeFvUZWpmXzG5qadD0EThHziRmvyDil9wiZ0nk7sM-A08i379ONcO2BjjwhphLEdlg9pkbzsTI4CbXamGvDsHVhDOgdL326tD_fmjiNBO3sQrxuVv-vQZf1OM8O-yK1wjOYZ_oPs7cf_4XBAwKHzeRtdDzrfE0txSl0ZG046bg2qMtJC8DAo");'></div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight">John Smith</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">@johnsmith_fit · 5 hours ago</p>
+</div>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-xl text-slate-500 dark:text-slate-400">more_horiz</span>
+</button>
+</div>
+<p class="mt-3 text-slate-700 dark:text-slate-300 text-base font-normal leading-relaxed">Just finished a great workout session at the gym. Feeling energized and ready to tackle the week! 💪 #fitness #motivation</p>
+</div>
+<div class="flex items-center justify-around py-1">
+<div class="flex items-center justify-center gap-2 px-3 py-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">345</p>
+</div>
+<div class="flex items-center justify-center gap-2 px-3 py-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">23</p>
+</div>
+<div class="flex items-center justify-center gap-2 px-3 py-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-2xl">repeat</span>
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">5</p>
+</div>
+<div class="flex items-center justify-center gap-2 px-3 py-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 text-slate-500 dark:text-slate-400 hover:text-primary transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-2xl">ios_share</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Right Sidebar -->
+<aside class="sticky top-0 h-screen w-80 flex-shrink-0 p-4 hidden xl:flex flex-col gap-6">
+<!-- Who to Follow -->
+<div class="flex flex-col gap-4 rounded-lg bg-white dark:bg-[#1C1F27] p-4">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Who to follow</h2>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="TechCrunch avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOxQdAR4BWzRhVozLQY9zZu3d5JFKR1bzMj2ZZBjAKO7uyr9igiyJyJF7xUHRf8h00iDoXZBvPktp1KyCS6I2O3pycAJayStp6vDA-srssCYJETo8geamDYzcdmUSg-1dYhR8TjQCdrNk65WYn-LVXNStx1jwvX7nAlhYP9bOiC3yp4m1D39aUCJ1kunv5z4D3OlKI4RycJApLj7pL3QHWgAH90rg6FTRjTAMRCb61GC-ZyoMrGULKmTLki2BQMcyhIdIcxWxPRO1h");'></div>
+<div>
+<p class="font-bold text-sm text-slate-900 dark:text-white">TechCrunch</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">@TechCrunch</p>
+</div>
+</div>
+<button class="bg-slate-900 dark:bg-slate-200 text-white dark:text-slate-900 text-sm font-bold px-4 h-8 rounded-full">Follow</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="NASA avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAztFgymsmy8lIjaM11vu8xfeobrQoKnvu7hDwk7u1W8tJR4Z5_Hno1nRoQ6zQuQOYGE1j92MLfLatO_CYyoELCB5a0AK0hHZhuPcZvV1AssuBPyEwMSFuSEgCfACXuOJ1NXC1Anzfl-iLVuWM4Ys8GlhRqv0s6o-K1j7WHPZbBtWsvgaUCcL5G8f5Qe5L3wmwr8KO6CZs3SRUI4yv5vU33AVmmaNCGRJtIgs6uagcaZ_mDiaVp0t5KHP4MhyrUpO_6YSi9NZU296Ij");'></div>
+<div>
+<p class="font-bold text-sm text-slate-900 dark:text-white">NASA</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">@NASA</p>
+</div>
+</div>
+<button class="bg-slate-900 dark:bg-slate-200 text-white dark:text-slate-900 text-sm font-bold px-4 h-8 rounded-full">Follow</button>
+</div>
+<a class="text-primary text-sm font-medium hover:underline" href="#">Show more</a>
+</div>
+</div>
+<!-- Trending Topics -->
+<div class="flex flex-col gap-4 rounded-lg bg-white dark:bg-[#1C1F27] p-4">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Trending</h2>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm text-slate-500 dark:text-slate-400">1 · Trending</p>
+<p class="font-bold text-sm text-slate-900 dark:text-white">#AIRevolution</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">120k posts</p>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-xl text-slate-500 dark:text-slate-400">more_horiz</span>
+</button>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm text-slate-500 dark:text-slate-400">2 · Sports</p>
+<p class="font-bold text-sm text-slate-900 dark:text-white">Champions League</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">98k posts</p>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-xl text-slate-500 dark:text-slate-400">more_horiz</span>
+</button>
+</div>
+<a class="text-primary text-sm font-medium hover:underline" href="#">Show more</a>
+</div>
+</div>
+</aside>
+</div>
+</body></html>
