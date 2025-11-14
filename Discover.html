@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover - SocialScape</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Spline Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111827] dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-[#e5e7eb] dark:border-b-[#282e39] bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-black dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">SocialScape</h2>
+</div>
+</div>
+<div class="hidden md:flex flex-1 justify-center px-8">
+<label class="flex flex-col min-w-40 !h-10 w-full max-w-sm">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full">
+<div class="text-[#6b7280] dark:text-[#9da6b9] flex items-center justify-center pl-4 rounded-l-full">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full text-black dark:text-white focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-[#6b7280] dark:placeholder:text-[#9da6b9] px-4 pl-2 text-sm" placeholder="Search" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium text-[#4b5563] dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium text-primary dark:text-primary" href="#">Discover</a>
+<a class="text-sm font-medium text-[#4b5563] dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Messages</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Create</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLzZsxOPwBcbS607zcztFO3AmXsY8Z8I9axhbZvtP4ynIAR7pSnydBywHkksfjVeiEKDvlrT9oUB0SB0mcsgbzDdy_BSKWCvC2q_eeTa0EJksJwRiTm-25UIGdxd7y9zpmgc7niNNjeL4HB-R1ptIFPJrUAuWGuGpoSax0YH4M97lYmqIVuG3y2DXgN_LvWLwhT7E05ya5jGwa7VlSjTEZqnc4W8MC0qgj3lnvXsO0gDT82MbGGx_h_0cbu6uwiuHMfqCohgGbbz3F");'></div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="container mx-auto px-4 py-8">
+<div class="grid grid-cols-12 gap-8">
+<!-- Main Content Area -->
+<div class="col-span-12 lg:col-span-8">
+<!-- Search Bar (for mobile/tablet) -->
+<div class="px-1 py-3 lg:hidden">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full bg-[#e5e7eb] dark:bg-[#282e39]">
+<div class="text-[#6b7280] dark:text-[#9da6b9] flex items-center justify-center pl-4 rounded-l-full">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full text-black dark:text-white focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-[#6b7280] dark:placeholder:text-[#9da6b9] px-4 pl-2 text-base font-normal leading-normal" placeholder="Search for posts, users, or topics" value=""/>
+</div>
+</label>
+</div>
+<!-- Tabs -->
+<div class="pb-3 sticky top-[61px] bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-40">
+<div class="flex border-b border-[#e5e7eb] dark:border-[#3b4354] px-4 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">For You</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#6b7280] dark:text-[#9da6b9] hover:text-black dark:hover:text-white pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Trending</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#6b7280] dark:text-[#9da6b9] hover:text-black dark:hover:text-white pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Videos</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#6b7280] dark:text-[#9da6b9] hover:text-black dark:hover:text-white pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Users</p>
+</a>
+</div>
+</div>
+<!-- Image Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
+<div class="group relative bg-cover bg-center flex flex-col gap-3 rounded justify-end aspect-[3/4] overflow-hidden" data-alt="A tranquil beach scene at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANLT4BZAXGS4oMSAHiueZLeKhaQGjR1A_p9MBcA2HOku9DvKgYqbN1tmhELt4xXrriKfKTijGfZplj6tSetAYseGYnUyT1DSu59FT4neLYs2zWRL00P1Ll3n2_Q5strR0Qdw_Cc3TuupIKLQkMOJYDwUozo9OhEFdIawOGlHGl0dEEbYKHJ4WKkTyDYQcJ2MKgIu6Cg9v_R0BElwgFaQzQTdE9_92uXD5MqY7erlLwXMa20sCAQTclUVl51qXwWsJV_1FkNYiNAbIB");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlz6jcF-EjCi8zBOvo-J0ApQsYxnnnlOM-X2fWAygpg7vYd4Ddk8r9mEj2D_yiIu6m5xH_jGZtwzGVKUd8L8MqK1VEPLBnUmmBXPlLEJdMUdHXhsa-rS0ozJme-pdyn9hrMfhbYbVCh_BJjtsEXHnoPjTX1k4db8fFhgYETLtwFlWRRrzqNFcydHLIrAWae2gCyzBlzMyA5WXkPIWK8sK1S0RejJQ25qiQ-GDuciIGtMgTqlMc-EY4ZnmqfgIO0dPI-ehfoaq2Mydh')"></div>
+<p class="text-white text-sm font-bold">NatureLover</p>
+</div>
+</div>
+</div>
+<div class="group relative bg-cover bg-center flex flex-col gap-3 rounded justify-end aspect-[3/4] overflow-hidden" data-alt="Modern architectural building with glass facade" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhQJ1FtGggCkX8Inp-zmMBjz0TsFRl0r7EN-Cx5EyqUy6w_jVPgnYBGBHWIVuhi4kzaNKGtGQqnLlNAZ_BlWnajM19Pnr1tJyjDcTFUo0QNM2d8ZA8yvtr-eXHU2fHlC0f_8WNqDM68tJKgW9Pj4uitHYCHyTPDijYTxxM1D_lJfbAFja2d2ZfXPlhrrGLLkboDPJ2KFDRJIZx5dnSJIv558OW_Re7-oGkpWP2__eoXhFqAK-qei0Qx-hcp52kT5qzgKjx63VMvSEV");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeAdrVRIM88mhanBLIaubRVbo-qown9VYBvyndUbX57fh7SnQOVW-VqQHZOoQdMZ3L46cNOmTwW6rp0UpBhm38O3RprYl--n5JmQH8p2nfdhZ90z2XupjFfqQy5jvzGCXKFA1bqSCHU41W-WCNcm8FKDf83eZleROqCbisNVUNywfheeU-I3w1RHShJwZrSEzfPcxPv9BNP2ALVQlNPJCPDqEck9DAD3V5z8VERc5i8Kqr8mSELKRft_nqNEbCY6-L6edHVbctL9jF')"></div>
+<p class="text-white text-sm font-bold">ArchiGram</p>
+</div>
+</div>
+</div>
+<div class="group relative bg-cover bg-center flex flex-col gap-3 rounded justify-end aspect-[3/4] overflow-hidden" data-alt="A delicious looking plate of pasta" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwmX18MOCMfSRKjGtfbwLSWZJogToBQL1fejBdVOmczpqqT6k1ebFI_jIrQj1G01oBGKG5GmMve-0jBEnFmV4dp32L8Vykr1BZzw_uj8UiQl896M_CLifnwifqumsXZ_2OPgx9jP_WRMJjTnX6OsKpFYs36BUbJVGPfkmVrS7TJvsdDG2Jb6X0xo7HHHTjm1bOO3XGnDCaxUtM09fzE8Vjwsx9olGSLa8PDgWdp4gUdYR8ylnwGzjZspAqpxaXk9y8dAAj2cJzw_V3");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC24pyIcT8w-w9wWBpKLau-WybC0CA59w3iEvVamlV9a5dBpOVhl-VSakf3wnsL1g0VbQ6NYbQrAh4mVgaFnb4Ck-SMTVu7UtnRxKT_uP85vUxOi-W4kP0b4aexSOe0ShrCuC5p_kCNNrTreR2lInASUmQvCji_RXKR8ajS_4aEA_Pr4280DjHeuUWUPO6rz_s9sX3o-8JMuDYYEwYgpHTAX68QGv9p7lkno1Y1lNjgamR71GSp74kDyQrqKmck1Am8qyLgI77aB_vp')"></div>
+<p class="text-white text-sm font-bold">FoodieFinds</p>
+</div>
+</div>
+</div>
+<div class="group relative bg-cover bg-center flex flex-col gap-3 rounded justify-end aspect-[3/4] overflow-hidden" data-alt="A city skyline at night with vibrant lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA73b5OXeaZwm58r0-uxLQdmjsAa68u7C-X_spUOMQJAXuROvqNPeDjSr834Y28FjSsszpBP3sjIdWAyOtvo9WJySs2kKA5m9UJIbmrJUCHdvsudCeB-DMtKYGqI23IOdt6zrNyOLWGlseoXsut9l-KLCaBYlB58yv4H7fJ8i-MnWYHe5B6O1F5rfMq2drupTtBMwko15z94I-bds2C_sOAo-aV1LDk9xW7Naj4LdQAq5_D7pEiH7Q2x4DeGO07VtC88UWncRariLaL");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKXpmktW-WdnoNPFp2N8XWGZ6YK7Ru36A6jD98cNAzMJdceG_m0c0YhjREfPlbMNiocVL9sYUo77mk0T7aNo74oLeJ--5QS8MrWxwa2aOwlvk8bA-JBO_oYBSPfKZrH1tvtvIUPI3uVuM3RdciV-XiXGXlbRKXidzxNhe2OT-2OGHSvzqF8kuXov_6sGNnFaVzPCJS4RNg7IFhWKrbvGsMB7Wmt_0SngqBgkcFV20EJgoj5Z_D5OrnD0rP1CRUnnCwEW7js4B6KsrC')"></div>
+<p class="text-white text-sm font-bold">CityScapes</p>
+</div>
+</div>
+</div>
+<div class="group relative bg-cover bg-center flex flex-col gap-3 rounded justify-end aspect-[3/4] overflow-hidden" data-alt="A cute puppy playing in a field" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwVmslBcrwPz8V_MZAshr2QQG1_-Cccpe47-Z2-e3w7molDFJovFWFwPWoDKBLC5FOzGFVYZNguEO1vmp_86kTZcMzbkiu8N16i3iDTfkJhg_OOF8rJtEoVAT5biTVquuU5bUlat6XkFqqgH8RKBSqb5dRehrNESjEZu23YbFeAhsC5vNYlO3jFzwjWrxVKhtk5Eo8DX0um8mR4ZeV6d_UO0Yt2AfAhv-O08Axff0msBlrLLokaGKVFupuoRDLHVq2EAM3VOdZpIAi");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-2VMtbvjbaNaiBHyCM7sPiJ22h4JdZ_hrEYY80KP3OPq9e9b9vQLh9y3bN-B8FI7iE8Lygiua5JT1Aqp8eAXoMhRSXvlgp7MhvrfD8PfSp-q90Miy3bocivsdpIY0yFMN5G3XNIha_h-YelzPAMdzJVX-Rq4_mOSbO4ZbU9QQ8os7kX6ww1CrNuwZtsnvI-R4YL7yzUa5oRGXUcHIMrPF5JqVex0ah1ZKpDHQqd1j3hYFZm5qX81we9KpiOwprJNKjpd2WYB_YvFY')"></div>
+<p class="text-white text-sm font-bold">DogDays</p>
+</div>
+</div>
+</div>
+<div class="group relative bg-cover bg-center flex flex-col gap-3 rounded justify-end aspect-[3/4] overflow-hidden" data-alt="Abstract art with swirling colors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSDRlBTLJ3X74vG3zBVS4-JDkHlN_vHE11SU8pYsWZwZqOmihE0yvVK-DtS6a6hS-5x5TSqbhdTLXPINw8ZMnhI53CmYgmF_NPBXeuKZgIanBOnjf4Wmm1151rF-lE8rRHNg42yFVEZLlyYhGoH-B9crgzzdHf7klg6GbzpDz0SubIX2nfpHY-Yvj3ANBpBZ-VxOUxci1376YXpRKk97k4c-j2_WPAjZDrRQWfYK4MOUszVueo3T6WzfRL6tdrPyGW814-uFwhjLSG");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUTeZ2lMSV_Q9GGxX-l1kd4xG4UozD4DHEGUjAaMD1j-itreIBUZNGPPV0hnVtJrry9MvsYqXZWvc96lC0U8aAmgIrRFFOUxfQMHB2cFdpEVH1HTWBLV0qNwNBGTVEn3EhvzaGM0ke7xigXOW28hFD34h_3TvQxq_O0HYO21iDI4nFZV22f3mhhVA3mAxsm3KgbqzuA7mZuJIF9K4mHQc8AlOvR89QaQ5dpgzI7xM4qwB9ZRn-JjP_gWUQnjhY7r8xiANi7-iPMF0Y')"></div>
+<p class="text-white text-sm font-bold">ArtAbstract</p>
+</div>
+</div>
+</div>
+<div class="group relative bg-cover bg-center flex flex-col gap-3 rounded justify-end aspect-[3/4] overflow-hidden" data-alt="Person hiking in a forest" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAN9kPl0WiKNRlKICSdy9EdRTI-Jizx9UA4gYVcnJT4RQClYM069sKIHgzRXkP8To9kFGH8Kgiii5FQ6JEPN7ypaQu94PUFGUraeIIuJATX-aa8KWl6aKhmt5b_vNL-PzN7nAUURdllJ8sgL794y7dsAUocIl8Y116m-AInRNEiITYTzQGwrxCIPp5dBrw1OCHoCqwGa2zRvrtfQ1khgzRYIVqkvXyGjHNdI62whSE2cIqSQFvnQVwBNDA6w8U8q3u9CW0m6X5sEOj9");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBE0gyZZVC65tluKimMiT-P7lqdQlAJOY1dxf4UnCHlGlWdcFfhjzptBEi4aZx4wn_-D3AxEAD2RCjFVBRoERZqMSoagd8eQiXdKprVZlL7chlH9FzNoKJLacbyV7RJ3yhj4iW1NX8eg3g2OkxT6AkTc8qwNfW6R52ELyWBkGwpv2AWK_IBvMPoH5gSxKKH8vRlOClKUC-BYpjsR14tNdIW8JPddbgooyvuy9DywpJqxbXV8TMoUsiccXAugIBlrRqNTS5wl0hAQfmL')"></div>
+<p class="text-white text-sm font-bold">Wanderlust</p>
+</div>
+</div>
+</div>
+<div class="group relative bg-cover bg-center flex flex-col gap-3 rounded justify-end aspect-[3/4] overflow-hidden" data-alt="Laptop on a wooden desk with a coffee" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVmmjUDF__ZW1eTTxQsf9SyniCMdMvCi3h5vp51lQ4nZmt3E30r5spEF-yNob1edV1t4i1pzzHi0Kpi7KNXuO-SCekx_st3nTUGqOAQSHY-tBMpd8ux8ikIHJhbbN0Jw8IQWXNNmGgPiaPfGFNUa3SBxScw9PZaHp9ryeXMdvw0c5azJdcQrxBKE2mxUwMriIkUcsZ96nlkpVpHlIa5X5uT5cyRvJD5rban-PAKljn7p8nMzEletcYP8yqV6DqTqi8KQRh2LQZkOo8");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkHCnsSPNHOlTxZpGtTjvzOlL4y-rvoVcIfpxGjV8nFC-zLT-FZo7mqUxtmPmA-NhNPVRqBqBfBuOgL4XEA9WcOxDDHe5Bj7PKI4RvqW_6gDniZ8idfSLTB_QfOzWpnsE41-bdZ53gafE93yWvVnm5pkGQVE1lS3QRWNIrTkb86H-Fu7_blN2Sjxa-5gcoPjqqTtkq_FPVK0n3xl3o_3MjmOEadqx1oX9hE4s7q6RbN4kjlNBau5JmIwENO1Jb8KgyrHHgLj6PWET9')"></div>
+<p class="text-white text-sm font-bold">TechLife</p>
+</div>
+</div>
+</div>
+<div class="group relative bg-cover bg-center flex flex-col gap-3 rounded justify-end aspect-[3/4] overflow-hidden" data-alt="A macro shot of a flower" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZ1_eVqKowKvofwAD7Xh7K8W___youRZ0bp7463KuiBWu6E83eEzw4ImVhA28ARvYM71uc044MyechOPzfEkdtYMQ-1Zm-wCZHymYgq0ACawqNPux-7Ck7Odw0vHbuFQNXOB1xadqZrLv2hPM06qDz764FpkZEOq48FzlSP6vRy3EXcP4bnOqRB15j4KSPXN-pEJxKS-2D_lH-Ub_4P91EEh7p7FUiPzrhbccV52e0APbiul34NIf2ainVyRBhIBlNAA7ewgjGrDz5");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative z-10 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex items-center gap-2">
+<div class="size-8 rounded-full bg-cover bg-center" data-alt="User avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCl6ItHpWshQq-CKLSfetdPgizTXB6TN2Wsjy6Ogh7oKmmtuACRYVqADYJ5rmJAX9-xSblIxzB6EbZs9YFCaj0R4BktF3-mo-laUd7DNvNrG3yKFgKD4q_hCfc9fbb4lwENLhRk9iecQEXsQIYCMjehxLiI-NqGQgfDeuj-6BZA9dDKCjyDQksEFAKBR4d5XyFVVeUoZWX-mNBCf84tNaxOG3acB8ZvBIbXoQuTYQUXLYlGOT0ueiCHmiSvpjNIo2fgcw7tqf04Okcw')"></div>
+<p class="text-white text-sm font-bold">FlowerPower</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar -->
+<aside class="col-span-12 lg:col-span-4 hidden lg:block">
+<div class="sticky top-[85px] space-y-8">
+<!-- Trending Topics Card -->
+<div class="bg-white dark:bg-[#1C2431] border border-[#e5e7eb] dark:border-[#282e39] rounded-lg p-5">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Trending Now</h2>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col">
+<span class="text-xs text-[#6b7280] dark:text-[#9da6b9]">1 · Trending</span>
+<p class="font-bold">#UIUXDesign</p>
+<span class="text-xs text-[#6b7280] dark:text-[#9da6b9]">125K Posts</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-[#6b7280] dark:text-[#9da6b9]">2 · Trending</span>
+<p class="font-bold">#WebDev</p>
+<span class="text-xs text-[#6b7280] dark:text-[#9da6b9]">98K Posts</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-[#6b7280] dark:text-[#9da6b9]">3 · Trending in Tech</span>
+<p class="font-bold">AI Revolution</p>
+<span class="text-xs text-[#6b7280] dark:text-[#9da6b9]">76K Posts</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-[#6b7280] dark:text-[#9da6b9]">4 · Trending</span>
+<p class="font-bold">#DigitalArt</p>
+<span class="text-xs text-[#6b7280] dark:text-[#9da6b9]">64K Posts</span>
+</div>
+<a class="text-primary text-sm font-medium pt-2" href="#">Show more</a>
+</div>
+</div>
+<!-- Suggested Users Card -->
+<div class="bg-white dark:bg-[#1C2431] border border-[#e5e7eb] dark:border-[#282e39] rounded-lg p-5">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Who to follow</h2>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-full bg-cover bg-center" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKhEdpgNykonAYUHgwdWVVX7HlIu2JAfUMuTZ7tnYVlxpimfdd8iCaVqRcnZ-l3K4hiNWMT1DZOnDWhMW2oSWsZGl1U2V2WoiU96Orx8flL0RZBBUKsULNIgfCmxVP8OjfvHIzlGJcbxXKw_W0uUAbosnZTrAp9m2wq8T8Pm1G3K2uaS1bZOU9Ye3D7_8Dl65Qgy9GPYsJOlhIzNtxMjb7Y3TVPDNtwHlP9Zp43iXknm0nf_tek6Xx3UbIeuYdAw0f2OJHnoLNrtpZ")'></div>
+<div class="flex-1">
+<p class="font-bold text-sm">Johnathan Doe</p>
+<p class="text-sm text-[#6b7280] dark:text-[#9da6b9]">@john_doe</p>
+</div>
+<button class="flex min-w-[80px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-3 bg-primary/10 text-primary text-sm font-bold leading-normal tracking-[0.015em]">
+                                        Follow
+                                    </button>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-full bg-cover bg-center" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDH367TzoZL9xuQ0CVBUy00Y3iLKe-kO5BjLF-ElkNI2IZ_w99Bmm4URftqxMO1QGvhuIh7URaFQNSzDpOQyiRFSIAsQyif3APx2B44tV5vXueSQ9adCdVBc7RKXcngP2JxFakDVcA82SrA_PkQgtB42XGhhPhxGymbz_vFJEwT9RpTF9juCDGBsxrlruP-ozPEsVVREUySDP7952b_TPvyL-zwlMsOCgqUxZ624u8mVrID6CUW9ccEzj4Ztr8a12oY7p9cYWi6M4eh")'></div>
+<div class="flex-1">
+<p class="font-bold text-sm">Jane Smith</p>
+<p class="text-sm text-[#6b7280] dark:text-[#9da6b9]">@jane_ux</p>
+</div>
+<button class="flex min-w-[80px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-3 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                                        Following
+                                    </button>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-12 rounded-full bg-cover bg-center" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATvxR43XKNVNm7Y_wYDchrFXWv-Bb-As35VBKGfvg_UCIXWHmMyRhlEn7wOje6pzFzqW25HzLxKqjuMhAcN-HB3KjeftiL4tBB25x6vQtrd0S_fk5zbO1rsXGO-_IUfrLvmFvgpLx0VxuH74rTlqBopjQI1U9FNCtzYw822s3X-tPh6v3XnDwsEXpmKSiU7o7vZF5klbHc92Ujaxxd7eEjyjpuhqEHMgZvHaXdbgA1vr7fzdoKbezHkj5h-_m1IQl9xJ_jDZGQOyHo")'></div>
+<div class="flex-1">
+<p class="font-bold text-sm">Creative Studio</p>
+<p class="text-sm text-[#6b7280] dark:text-[#9da6b9]">@cstudio</p>
+</div>
+<button class="flex min-w-[80px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-3 bg-primary/10 text-primary text-sm font-bold leading-normal tracking-[0.015em]">
+                                        Follow
+                                    </button>
+</div>
+<a class="text-primary text-sm font-medium pt-2" href="#">Show more</a>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-12 border-t border-[#e5e7eb] dark:border-[#282e39]">
+<div class="container mx-auto px-4 py-6 text-center text-sm text-[#6b7280] dark:text-[#9da6b9]">
+<div class="flex justify-center gap-4">
+<a class="hover:text-primary" href="#">About</a>
+<a class="hover:text-primary" href="#">Help</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+</div>
+<p class="mt-4">© 2024 SocialScape. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>
