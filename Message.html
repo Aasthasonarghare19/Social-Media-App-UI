@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Direct Messages</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Spline Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-screen w-full text-zinc-900 dark:text-zinc-50">
+<!-- Left Pane: Conversation List -->
+<aside class="flex h-full w-full max-w-sm flex-col border-r border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-background-dark/50">
+<!-- SideNavBar adapted as header -->
+<div class="flex flex-col gap-4 p-4 border-b border-zinc-200 dark:border-zinc-800">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar of Daniel Smith" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAV_5QRSkB0LPtF-_vKKjM9eocMzK8cPwTVGNAOj7jPVc2fE2t7bh6e5SCQwht1Qx-0zn2Ltn4pJYimLa5oIPNXwp9tqOphvZFE-avDKJxUoCqU3tD7oK9pVP7l-AMy1O6g5hRFxYLPj5zKNH0mj0HAHadH9X62N6PTBFTIaHMr-b8nWM25Zm6vVOGQUq42Z-wnZnfFPcz-47ny4C2NrQxnSOJiIudxcTaJbm7f-y8WDAJcvCrr54k-ZO4PF2eBbftpsmvMmMCD9pyc");'></div>
+<h1 class="text-zinc-900 dark:text-white text-lg font-bold">Messages</h1>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined text-xl">edit_square</span>
+<span class="truncate">New message</span>
+</button>
+</div>
+<!-- SearchBar -->
+<div class="">
+<label class="flex flex-col min-w-40 h-11 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full">
+<div class="text-zinc-400 dark:text-zinc-500 flex border-none bg-zinc-100 dark:bg-zinc-900 items-center justify-center pl-4 rounded-l-full border-r-0">
+<span class="material-symbols-outlined !fill-0 !text-2xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-zinc-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-zinc-100 dark:bg-zinc-900 focus:border-none h-full placeholder:text-zinc-400 dark:placeholder:text-zinc-500 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search messages" value=""/>
+</div>
+</label>
+</div>
+</div>
+<!-- Conversation List -->
+<div class="flex-1 overflow-y-auto">
+<!-- Active Conversation Item -->
+<div class="flex gap-4 bg-primary/10 dark:bg-primary/20 px-4 py-3 justify-between cursor-pointer border-r-4 border-primary">
+<div class="flex items-start gap-4">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14" data-alt="User avatar of Olivia Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuSlwqYkW8T-5LD3abdcBiIl02MLUs5dNcjWnBOl3VPxasmqrewibhW0H4h9wlxXQsCEcmc_cnnA5EpnX1aHH8BjrO_7dIX3rE8ik5Te-M0hry5wRIKs5mSITqao8YZF_KuMzICzX4w_2MZJGmvC1X9sVFu40-xZuJ6KAfVB_f9iF9dTAVRnunTR1sVRT6oDcK-nxhlLjVq7xbRIt9cocWhx09XV-nWh0YohO8VHVX6rgqabJgGIAVmovkTCgewCnkUetVv65Z-zmG");'></div>
+<div class="absolute bottom-0 right-0 size-4 bg-green-500 rounded-full border-2 border-white dark:border-zinc-800"></div>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-zinc-900 dark:text-white text-base font-semibold leading-normal">Olivia Chen</p>
+<p class="text-primary text-sm font-medium leading-normal">Sounds good! See you then.</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-2">
+<p class="text-zinc-500 dark:text-zinc-400 text-xs font-normal leading-normal">10:42 AM</p>
+<span class="flex items-center justify-center h-5 w-5 rounded-full bg-primary text-white text-xs font-bold">2</span>
+</div>
+</div>
+<!-- Unread Conversation Item -->
+<div class="flex gap-4 px-4 py-3 justify-between cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-900/50 transition-colors duration-200">
+<div class="flex items-start gap-4">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14" data-alt="User avatar of Liam Rodriguez" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfr3boKYN7y-GwCy7HVPJq1JTqMakb6jIG2Y9fkOL6MWF3JB-mEqJaalMFRoYvpQP20ZWpZ-hfu5zqVIAYmGQL57abA460q-tI-7VtI3V9hJL3i4qzS-telkbxJNpcpuGr6Pqlc8syKFqgP70acUY-zDuRfnc-Q-C132Ipse5Qi0H8kyeqcG6WlQ9WBS4nm-Zm7a7AYjYfQiS34J8n-vqkuJaLmgaN06rmssL-W6Mq5uCMoZlQFONZy7IPqTCiQj05TI_-0VC09f2o");'></div>
+<div class="absolute bottom-0 right-0 size-4 bg-green-500 rounded-full border-2 border-white dark:border-zinc-800"></div>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-zinc-900 dark:text-white text-base font-semibold leading-normal">Liam Rodriguez</p>
+<p class="text-zinc-800 dark:text-zinc-200 text-sm font-semibold leading-normal">Haha, that's hilarious.</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-2">
+<p class="text-zinc-500 dark:text-zinc-400 text-xs font-normal leading-normal">Yesterday</p>
+<span class="flex items-center justify-center h-5 w-5 rounded-full bg-primary text-white text-xs font-bold">1</span>
+</div>
+</div>
+<!-- Read Conversation Item -->
+<div class="flex items-center gap-4 px-4 py-3 justify-between cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-900/50 transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14" data-alt="User avatar of Sophia Patel" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPBXpVgND2eP9OTy6C9-osNHuhL_Ak_rnxmZrDKtDqAJM4WUjjJ1NoEM_FGcYgeU70ofU95AboqmBUrM7V8H38W2G7Qz7IJo68QQYSdUfMFsV_Vw9GXtr_MlZXIFmx7i8xiOUd0-1Z5o_OjTM_HfFdcR9ofr3_Ciw1VaXOn7anrnx73LJYx_nYuI5v8MblFLSCZFd-5ke9hmvcrCBiubNB9WhrFedIQnaZcm5IsNoYJRP_mqBYrH09UkSu5oUuGQwzNrmDLKnR2oJY");'></div>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Sophia Patel</p>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm font-normal leading-normal line-clamp-1">Can you send over the file?</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-zinc-500 dark:text-zinc-400 text-xs font-normal leading-normal">Mon</p>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 py-3 justify-between cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-900/50 transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14" data-alt="User avatar of Noah Kim" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlV-mBtmi8da6Owtu8ity8P5Lt0pkwoP8D2oDbumQNhY-rlyubzPHP4dGlmgfpfSZr4QLAqR9NLI8qZMCa7sbOQEyasiT0Qy6W_mMB2fAp_IMG8VtVXh59TzHDAWRA3ew5X-suLdliWL1qmGZ37yBE82hTF-hKR-d3mT8RNAs_P8q68zZc_kpB1qW1wQIsj8pPr-sUaJRD40eArqmiK7LAVG4tSDGdMdXxEKxW8tpHuIGEnBObCO_2ChtixudBVkEfKYw5PsxCIJXK");'></div>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Noah Kim</p>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm font-normal leading-normal line-clamp-1">Just checking in.</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-zinc-500 dark:text-zinc-400 text-xs font-normal leading-normal">Sun</p>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 py-3 justify-between cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-900/50 transition-colors duration-200">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-14" data-alt="User avatar of Ava Garcia" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAd-sp0JbfvTKE-RrqBJd0rNzioKXiD81p2GLQG2yXJ_nfFUDJl_LQhD1gwYUCV6D8lbQ4R1wat9LEt_KX_v2QXC2v-B9k5T_tuz7Lzg3iM1_KRz1LGeZ9xwuAYB5lryVc7uybo8DnqwPzooxwxXG2Ncm3IscjjEMtL4ZNASI2cjS-ec7EXmjsmokk9bH5UPxhh4xdYRvcxwEKEHbhQeyJgt5ePob12qG3yzKWaIohyvXmHf95ASllmTknBXbBtSfQ-o4a7fAvnVlrZ");'></div>
+<div class="absolute bottom-0 right-0 size-4 bg-gray-400 rounded-full border-2 border-white dark:border-zinc-800"></div>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Ava Garcia</p>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm font-normal leading-normal line-clamp-1">You're welcome!</p>
+</div>
+</div>
+<div class="shrink-0">
+<p class="text-zinc-500 dark:text-zinc-400 text-xs font-normal leading-normal">Oct 28</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Right Pane: Chat Window -->
+<main class="flex h-full flex-1 flex-col">
+<!-- Chat Header -->
+<header class="flex shrink-0 items-center justify-between border-b border-zinc-200 dark:border-zinc-800 px-6 py-3">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="User avatar of Olivia Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDQcrh5nzdLUrsIlnhxpiBlQcL7Ya_5QTXeJg-BD-uxniaVNR9RsKDKsykJAU5MBLnGCqYJBtIucs8lfsQMymcg7kgwBXEwcg5B-1Nzic5RKZFfCD-RUsHlLS_8tJBsl3kh6_p-cboNe14Uoud4RQ4wRslwfrc-6WCtFOxsPKnWkooRTmrthMp0mrytBsNFTXXlai2q5OJs_ken_j9pbE81IrPGMryOEx9a-9TBgqw3Z5cOcYC0mAjz7XlGRjYtumH6emP6Qm_gcdf2");'></div>
+<div class="absolute bottom-0 right-0 size-3.5 bg-green-500 rounded-full border-2 border-background-light dark:border-background-dark"></div>
+</div>
+<div>
+<h2 class="text-lg font-bold text-zinc-900 dark:text-white">Olivia Chen</h2>
+<p class="text-sm text-green-500 font-medium">Online</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+<span class="material-symbols-outlined !fill-0 !text-2xl">call</span>
+</button>
+<button class="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+<span class="material-symbols-outlined !fill-0 !text-2xl">videocam</span>
+</button>
+<button class="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+<span class="material-symbols-outlined !fill-0 !text-2xl">info</span>
+</button>
+</div>
+</header>
+<!-- Message Area -->
+<div class="flex-1 overflow-y-auto p-6">
+<div class="flex flex-col gap-4">
+<!-- Date Separator -->
+<div class="flex items-center justify-center">
+<span class="text-xs font-semibold text-zinc-500 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 px-3 py-1 rounded-full">Today</span>
+</div>
+<!-- Recipient Message Bubble -->
+<div class="flex items-end gap-3 max-w-xl">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 shrink-0" data-alt="User avatar of Olivia Chen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_kanuT-x4Czro92TKB8mLkmve7OzLrO2E8kFtlYEW3WSRw7H7PY5dG26eReZ9J5xBY9iXOJlFz80x_E2q5reme1fxG9WqphtnV-feXql5OAvuTQy0juX93RUwuD7m4Q9yI4gJQhRTm0vJk0MS46JB3pP6yaRAZYNa0cAonI7p_sQTVOg4UIxlZxTYWHSm5QR8qwaN_na18rIxHFYFExXcXDNcDxbtqbI9DWxCcxWTecUdN4WbnZy_UWyJnirdhd_9Vbz3WRYJEZtQ");'></div>
+<div class="flex flex-col items-start gap-1">
+<div class="bg-zinc-200 dark:bg-zinc-800 rounded-lg rounded-bl-none p-3">
+<p class="text-zinc-900 dark:text-white text-sm">Hey, are we still on for lunch tomorrow?</p>
+</div>
+<span class="text-xs text-zinc-500 dark:text-zinc-400">10:40 AM</span>
+</div>
+</div>
+<!-- Sender Message Bubble -->
+<div class="flex items-end gap-3 max-w-xl self-end">
+<div class="flex flex-col items-end gap-1">
+<div class="bg-primary text-white rounded-lg rounded-br-none p-3">
+<p class="text-sm">Absolutely! I'm looking forward to it. Same place?</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-xs text-zinc-500 dark:text-zinc-400">10:41 AM</span>
+<span class="material-symbols-outlined !text-base text-primary">done_all</span>
+</div>
+</div>
+</div>
+<!-- Recipient Message Bubble -->
+<div class="flex items-end gap-3 max-w-xl">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 shrink-0 invisible" data-alt="Placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqsKBSQXT_PSugYfQQxihRu2Kw1ACOjJTZ8Mgg3s7_JCa0xYXA0pXl5IiA4LuhkUp-oseZ5mgL8YDZY9XwCO_MbYk0AdGoM5C6zIVyC12DEsTdvW3rDQDmcpHa2r3Nu8Pd0wVea9bdq1XDHBZn9qlikm3W-ak_va1FCC69tB0V4KaU9fWSkIoPJvXVunaQFEHLtxhuHMBJgMLN82hkp3TWlTa7iKlGPn8iyO47IoK98lL7IE2HyTDkKfWe2oKi7I7mq29NwMDfpdHk");'></div>
+<div class="flex flex-col items-start gap-1">
+<div class="bg-zinc-200 dark:bg-zinc-800 rounded-lg rounded-bl-none p-3">
+<p class="text-zinc-900 dark:text-white text-sm">Yep, same place. 1 PM works for me.</p>
+</div>
+<span class="text-xs text-zinc-500 dark:text-zinc-400">10:41 AM</span>
+</div>
+</div>
+<!-- Sender Message Bubble -->
+<div class="flex items-end gap-3 max-w-xl self-end">
+<div class="flex flex-col items-end gap-1">
+<div class="bg-primary text-white rounded-lg rounded-br-none p-3">
+<p class="text-sm">Sounds good! See you then.</p>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-xs text-zinc-500 dark:text-zinc-400">10:42 AM</span>
+<span class="material-symbols-outlined !text-base text-zinc-500 dark:text-zinc-400">done_all</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Message Input Field -->
+<div class="shrink-0 p-4 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50">
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-primary transition-colors">
+<span class="material-symbols-outlined !fill-0 !text-2xl">add_circle</span>
+</button>
+<button class="p-2 rounded-full text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-primary transition-colors">
+<span class="material-symbols-outlined !fill-0 !text-2xl">gif_box</span>
+</button>
+<div class="flex-1 relative">
+<input class="w-full h-11 px-4 py-2 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white rounded-full focus:ring-2 focus:ring-primary focus:outline-none border-none placeholder:text-zinc-500 dark:placeholder:text-zinc-400" placeholder="Type a message..." type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-full text-zinc-500 dark:text-zinc-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined !fill-0 !text-2xl">sentiment_satisfied</span>
+</button>
+</div>
+<button class="flex items-center justify-center size-11 bg-primary text-white rounded-full shrink-0 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined !fill-0 !text-2xl">send</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>
