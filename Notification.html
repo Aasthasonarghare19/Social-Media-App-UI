@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications - SocialApp</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#135bec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Spline Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-white/10 px-6 md:px-10 py-3 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-gray-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clippath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">SocialApp</h2>
+</div>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm font-medium leading-normal" href="#">Explore</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm font-medium leading-normal" href="#">Messages</a>
+<a class="text-primary text-sm font-bold leading-normal relative" href="#">Notifications<span class="absolute -top-1 -right-3 h-2 w-2 rounded-full bg-primary"></span></a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">New Post</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar of Jane Doe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCd4N4teuUPn-2GaFBs0ve5wz2kjS_Ik44PgkDmXLRnh08jtVRz3s5uLtVU73N8CR3hOdMJDh6smpnJle8cIifMyn1wDldODdXUL4Bp7374lDMtccA4pRB9AvzOEmOR_ACrsCxW751PqDITqZ9ZDcIJf2DxFItX2MqkCIQkwxXx-VUvY1LjN1hIlI9WHyia6yBVcAbxmp06NP_kAExRB9dxbOju7RGsEwiV58PEm6LLzNQqj0bJwgTy-PDMGS0YGjI6ygvoW0J6Y48K");'></div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Filter Sidebar -->
+<aside class="lg:col-span-3">
+<div class="sticky top-28">
+<div class="flex h-full min-h-[700px] flex-col justify-between rounded-lg bg-white dark:bg-gray-800/20 p-4 border border-gray-200 dark:border-white/10">
+<div class="flex flex-col gap-4">
+<div class="flex flex-col">
+<h1 class="text-gray-900 dark:text-white text-xl font-bold leading-normal">Notifications</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">@janedoe</p>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-full bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined text-lg">list</span>
+<p class="text-sm font-bold leading-normal">All</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-700 dark:text-gray-300" href="#">
+<span class="material-symbols-outlined text-lg">alternate_email</span>
+<p class="text-sm font-medium leading-normal">Mentions &amp; Replies</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-700 dark:text-gray-300" href="#">
+<span class="material-symbols-outlined text-lg">favorite</span>
+<p class="text-sm font-medium leading-normal">Likes</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-gray-700 dark:text-gray-300" href="#">
+<span class="material-symbols-outlined text-lg">person_add</span>
+<p class="text-sm font-medium leading-normal">New Followers</p>
+</a>
+</div>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Mark all as read</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Right Column: Notifications Feed -->
+<div class="lg:col-span-9 space-y-6">
+<div class="bg-white dark:bg-gray-800/20 rounded-lg border border-gray-200 dark:border-white/10">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-6 pb-2 pt-4 border-b border-gray-200 dark:border-white/10">Today</h3>
+<div class="divide-y divide-gray-200 dark:divide-white/10">
+<div class="flex gap-4 bg-primary/10 dark:bg-primary/20 px-6 py-4 justify-between items-start hover:bg-primary/20 dark:hover:bg-primary/30 cursor-pointer">
+<div class="flex items-start gap-4 flex-grow">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="User avatar for alex_morgan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaG_Jk68oGdyD5xSz1u1j99WK2l2Xc8zeGO8_yNRUIWI8BPnsBsgzC3LYU7eiXu0poR_7JuSPz_rAPslIFSi6mVtwnPypUKq-H8tOxVf_3hI89FliUP6WyOJ5cSp65LdXUINnFZDkZYk3HavFR2SKEGd8m9l50Z02Sfiu9_mwc4cd9EGc04VsujMOlMdork9g8f-Kfg4hhaeV2feYYyT0yG4VBTmrYzjTMIiajcJEyEPGk-fsvDbSTDI6bBL0TewDh_Bu6UZxAPBvw");'></div>
+<span class="absolute bottom-0 right-0 block h-4 w-4 rounded-full bg-pink-500 border-2 border-primary/10 dark:border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[10px]">alternate_email</span>
+</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-1">
+<p class="text-gray-800 dark:text-gray-100 text-sm font-medium leading-normal"><span class="font-bold">alex_morgan</span> mentioned you in a post.</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal italic">"Can't wait for the game this weekend! Should be a great match. @janedoe"</p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-3">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">5m ago</p>
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+</div>
+<div class="flex items-center gap-4 px-6 min-h-[72px] py-4 justify-between hover:bg-gray-50 dark:hover:bg-white/5 cursor-pointer">
+<div class="flex items-center gap-4 flex-grow">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="User avatar for chris_anderson" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-WlSTYpJZJV5VRw30VpfnCpvEarg5_Ms_xd3RmdHQfH07uMi4aYu4ejZA0hECllLYPoMOpyoO8TCw1WBn64Xnv_hwbzsggkMh3bxnex6oA7wF0Y9XyPaQQkiVR_eP4ZVysCSYBAzWUexNW2qjPji8jyyrAwSAP2AEshj5Xbo2pJFUwv2dTEWPae-dyk0yQz_Nf7Eis9SvTUOhvEKRpVDcVxUq7TyT-NhhbhIwbDVuUm7KibNgD6Nm5qWT5b9pe49vagVJ7yODFMnp");'></div>
+<span class="absolute bottom-0 right-0 block h-4 w-4 rounded-full bg-blue-500 border-2 border-white dark:border-gray-800/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[10px]">person_add</span>
+</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-800 dark:text-gray-100 text-sm font-medium leading-normal line-clamp-1"><span class="font-bold">chris_anderson</span> started following you.</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-normal leading-normal line-clamp-2">2h ago</p>
+</div>
+</div>
+<div class="shrink-0">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-white text-sm font-medium leading-normal w-fit hover:bg-gray-300 dark:hover:bg-white/20">
+<span class="truncate">Follow Back</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800/20 rounded-lg border border-gray-200 dark:border-white/10">
+<h3 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-6 pb-2 pt-4 border-b border-gray-200 dark:border-white/10">This Week</h3>
+<div class="divide-y divide-gray-200 dark:divide-white/10">
+<div class="flex items-start gap-4 px-6 py-4 justify-between hover:bg-gray-50 dark:hover:bg-white/5 cursor-pointer">
+<div class="flex items-start gap-4 flex-grow">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="User avatar for samantha_bee" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvcTPIjglOba1uFBkrKubXSshC6IUD3b9_okcoVSjt_6SkmQfIYxO204-NtsMbB3Te51G9P6BLWXJonPkM3bgpkG-Y-W1EH5mdojrdzrVP62Q_DenuhFHSz_6nv0vOWQ_AA5VotpKi2Q8OLEk-iQz-h4f-5T8PF08YQ7i0Zl4cKhRJMamNjlKfnvxnn2X-ZqnXw8pE_jZCeeBoYSNJSPa62E5XyzxLkxl0pLv2sYoiIcLEIBPWOsW7LK_sYcqLqWad-l2co67scn8s");'></div>
+<span class="absolute bottom-0 right-0 block h-4 w-4 rounded-full bg-red-500 border-2 border-white dark:border-gray-800/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[10px]">favorite</span>
+</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-1 pt-1">
+<p class="text-gray-800 dark:text-gray-100 text-sm font-medium leading-normal"><span class="font-bold">samantha_bee</span> liked your post.</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-normal leading-normal">2d ago</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg h-14 w-14" data-alt="Thumbnail of a scenic mountain view" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBs9w8le_bV0izt2BE30Wdtzrlo4Kw29xwHVuM97YIqUqEE4OKVqnjGCgf52o8NMuIsy3aQlJjhgdy9kfyXPEjvw885JnQST-hrexsBtAQbYJH-zsjL1_vX_n_rsUch7Juc1XGlyAF3Amqmx77o4adwWpat0eoMCWcgGKkfaCE9mAjXjbwN-OvDqki4cdtcHXuEYGqE_OXcNbUaoDPty6LR5r3iy1MlhWr5466CsvIm_Xwc8ufrfD_xeAIqmSup7c0KztsTMTItyT2i");'></div>
+</div>
+</div>
+<div class="flex items-start gap-4 px-6 py-4 justify-between hover:bg-gray-50 dark:hover:bg-white/5 cursor-pointer">
+<div class="flex items-start gap-4 flex-grow">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" data-alt="User avatar for tech_guru" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDS0-ciPz-VLrxauH9MGLpFi2IZBPP5XtW_KFZ2t3NYOeKBxY3hRD0_DhY__qK5L0thIT6sQhgC7tcfpblCXuIYz4c3TXUoS9CyHMbTgzS4XoD3NozSYiIy_EaW3GWMNFvYUOykj-FCguOKXfRPQ7r6FDYnq3nG9bG6j89XpT8XpyLAwzIjiecu8cP5RMr_tdHw64wIR3WOhu3WltxBTmXAmLrt0ijoeDp8tWfosMaoG8fs3Tl0hxU532iBBnQWp6RKlK4pnTjnyNHZ");'></div>
+<span class="absolute bottom-0 right-0 block h-4 w-4 rounded-full bg-green-500 border-2 border-white dark:border-gray-800/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[10px]">chat_bubble</span>
+</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-1">
+<p class="text-gray-800 dark:text-gray-100 text-sm font-medium leading-normal"><span class="font-bold">tech_guru</span> replied to your comment.</p>
+<p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-normal italic">"That's a great point, I hadn't considered that perspective before."</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-normal leading-normal">4d ago</p>
+</div>
+</div>
+<div class="shrink-0">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg h-14 w-14" data-alt="Thumbnail of a modern office space" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBV3P8JXwuVCZZBLfoDXuzIVMoaZccuNC_JQLlr-0qpS1P3brwnE29t8t85MFGU6syLluVBt-4A2-bx9oug1q-1Itd4XPJeZ9NTy6PQBd03l0dNZlpQcWiyausb6hftt6EN016Rv-_rU32fgkInc5GeuOGLvA0TQyXxjDKKT3VjOpGcVueCFAA1xL0I1UEQP2UDethj6joYGioI4vSlUuVHd9lztTkh85xZEiOJqCc6zh-vkFSVc4NMNJzOWKidPOmqXU60TviylmpU");'></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Example -->
+<div class="text-center py-16 px-6 bg-white dark:bg-gray-800/20 rounded-lg border border-dashed border-gray-300 dark:border-white/20">
+<div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">notifications_off</span>
+</div>
+<h3 class="mt-4 text-lg font-semibold text-gray-900 dark:text-white">No new notifications yet</h3>
+<p class="mt-1 text-sm text-gray-500 dark:text-gray-400">When someone interacts with you, it will show up here.</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
